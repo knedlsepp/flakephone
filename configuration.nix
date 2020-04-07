@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 {
+  imports = [
+    (import <mobile-nixos/lib/configuration.nix> { device = "pine64-pinephone-braveheart"; })
+  ];
   users.users."sepp" = {
     isNormalUser = true;
     initialPassword = "";
