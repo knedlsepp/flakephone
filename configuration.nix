@@ -8,6 +8,15 @@
     initialPassword = "";
     extraGroups = [ "wheel" "networkmanager" "input" ];
   };
+  environment.systemPackages = with pkgs; [
+    vim
+    htop
+    git
+    sgtpuzzles
+  ];
+  services.xserver = {
+    desktopManager.xfce.enable = true;
+  };
 
   networking.hostName = "flakephone";
   networking.wireless = {
