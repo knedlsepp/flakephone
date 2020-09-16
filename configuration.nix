@@ -144,6 +144,10 @@
   )];
   documentation.dev.enable = true;
   environment.systemPackages = with pkgs; [
+    (writeShellScriptBin "firefox" ''
+      export MOZ_USE_XINPUT2=1
+      exec ${pkgs.firefox}/bin/firefox "$@"
+    '')
     chromium
     myVim
     fzf
