@@ -2,6 +2,7 @@
 {
   imports = [
     (import <mobile-nixos/lib/configuration.nix> { device = "pine64-pinephone-braveheart"; })
+    ./on-screen-keyboard.nix
   ];
   users.users."sepp" = {
     isNormalUser = true;
