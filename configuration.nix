@@ -147,6 +147,7 @@
     git
     sgtpuzzles
   ];
+  services.ntp.enable = true;
   services.xserver = {
     enable = true;
     videoDrivers = [ "modesetting" ];
