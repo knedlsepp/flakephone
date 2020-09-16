@@ -156,13 +156,9 @@
     videoDrivers = [ "modesetting" ];
     desktopManager.xfce.enable = true;
     desktopManager.xfce.enableXfwm = false;
-    displayManager.lightdm = {
-      enable = true;
-      autoLogin = {
-        enable = true;
-        user = "sepp";
-      };
-    };
+    displayManager.autoLogin.user = "sepp";
+    displayManager.autoLogin.enable = true;
+    displayManager.lightdm.enable = true;
   };
 
   programs.bash = {
