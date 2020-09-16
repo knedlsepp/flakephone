@@ -143,6 +143,7 @@
   )];
   documentation.dev.enable = true;
   environment.systemPackages = with pkgs; [
+    chromium
     myVim
     fzf
     htop
