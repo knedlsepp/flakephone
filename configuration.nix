@@ -141,6 +141,7 @@
       };
     }
   )];
+  documentation.dev.enable = true;
   environment.systemPackages = with pkgs; [
     myVim
     fzf
