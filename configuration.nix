@@ -143,6 +143,7 @@
   )];
   environment.systemPackages = with pkgs; [
     myVim
+    fzf
     htop
     git
     sgtpuzzles
@@ -162,7 +163,13 @@
     };
   };
 
-
+  programs.bash = {
+    enableCompletion = true;
+    interactiveShellInit = ''
+      source "$(fzf-share)/key-bindings.bash"
+      source "$(fzf-share)/completion.bash"
+    '';
+  };
 
   networking.hostName = "flakephone";
   networking.wireless = {
