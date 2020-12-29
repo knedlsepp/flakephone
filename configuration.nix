@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    (import <mobile-nixos/lib/configuration.nix> { device = "pine64-pinephone-braveheart"; })
+    (import <mobile-nixos/lib/configuration.nix> { device = "pine64-pinephone"; })
     ./on-screen-keyboard.nix
   ];
   users.users."sepp" = {
